@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark bg-dark"
+      className="navbar navbar-expand-lg"
       style={{
         padding: "10px",
-        justifyContent: "center", // added this to center the links
+        justifyContent: "center",
+        backgroundColor: "GrayText"
       }}
     >
       <ul className="navbar-nav">

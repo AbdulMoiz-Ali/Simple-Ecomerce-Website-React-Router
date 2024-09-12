@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './style.css'
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -33,18 +34,18 @@ const Home = () => {
   };
   return (
     <>
-      <div className="container">
-        <h1 className="text-center">Hello Customer</h1>
+      <div className="main">
+        <h1 className="text-center">---: Product :---</h1>
         {loading ? (
-          <h1>Loading...</h1>
+          <div className="loader"></div>
         ) : error ? (
           <h1>Error: {error}</h1>
         ) : data ? (
-          <div className="row">
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
             {data.products.map((item) => {
               return (
-                <div key={item.id} className="col-md-4 col-lg-3 col-xl-2">
-                  <div className="card m-3">
+                <div key={item.id} style={{ display: "flex", flexWrap: "wrap" }}>
+                  <div style={{ width: "400px" }} className="card m-3">
                     <img
                       src={item.thumbnail}
                       className="card-img-top"
